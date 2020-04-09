@@ -1,0 +1,35 @@
+$light-green: #EDF6E9;
+$green: #8ACB34;
+
+.product-list{
+  background-color: $light-green;
+  padding: 10px;
+  margin-top: 20px;
+  >p{
+    margin: 0;
+  }
+}
+
+.product{
+  margin-top: 10px;
+  p{
+    margin: 0;
+  }
+}
+
+button{
+  margin: 20px 0 10px 0;
+  min-width: 200px;
+  border: none;
+  color: white;
+  background-color: $green;
+  padding: 8px 40px;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  &.disabled{
+    background-color: $light-green;
+    cursor: not-allowed;
+  }
+}
+

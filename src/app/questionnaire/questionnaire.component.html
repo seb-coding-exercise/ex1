@@ -1,0 +1,37 @@
+<section>
+
+  <h1>Coding Exercise</h1>
+
+    <form [formGroup]="questionnareForm" (ngSubmit)="onSubmit()">
+
+        <div *ngFor="let question of questions">
+            <app-radio [control]="questionnareForm.get(question.key)" [question]="question"></app-radio>
+        </div>
+
+          <button [class.disabled]="isFormLoading">
+            <span [hidden]="isFormLoading">Submit</span>
+            <span [hidden]="!isFormLoading">Loading...</span>
+          </button>
+
+      </form>
+
+    <div class="product-list" *ngIf="isFormLoading">
+      <p>
+        Loading ...
+      </p>
+    </div>
+
+    <div class="product-list" *ngIf="!isFormLoading && availableProducts.length == 0">
+      <p>
+        No products available :(
+      </p>
+    </div>
+
+    <div class="product-list" *ngIf="!isFormLoading && availableProducts.length > 0">
+      <p>Available products:</p>
+        <div class="product" *ngFor="let product of availableProducts">
+            <p>{{product.name}}</p>
+        </div>
+    </div>
+
+</section>

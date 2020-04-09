@@ -1,0 +1,17 @@
+<div *ngIf="question" class="radio-container">
+    <p>{{question.label}}</p>
+
+    <div *ngFor="let option of question.options" class="radio-option">
+        <input type="radio" class="radio-input" [value]="option.value" name="{{question.key}}" [formControl]="control">
+        <label class="radio-label" for="{{question.key}}">{{option.label}}</label>
+    </div>
+
+    <div *ngIf="control.invalid && (control.dirty || control.touched)" class="radio-error">
+
+        <p *ngIf="control.errors.required">
+            This field is required.
+        </p>
+    </div>
+
+
+</div>

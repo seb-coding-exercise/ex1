@@ -1,0 +1,20 @@
+.radio-error{
+  color: red;
+  font-size: 10px;
+}
+
+.radio-option {
+  padding: 3px;
+  display: flex;
+  align-items: baseline;
+  label{
+    margin: 0px 0px 0px 5px;
+  }
+}
+
+.radio-container{
+  margin: 10px 0px;
+  p{
+    margin: 0px;
+  }
+}
