@@ -15,8 +15,8 @@ export const testQuestions: Question[] = [
         label: "Is customer a student?",
         key: "student",
         options: [
-            {label: "Yes, I am", value: "true"},
-            {label: "No, I am not", value: "false"}
+            {label: "Yes, he is", value: "true"},
+            {label: "No, he is not", value: "false"}
         ]
     },
     {
