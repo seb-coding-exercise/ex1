@@ -15,14 +15,16 @@ export class ApiService {
     // fake response with simulated delay
     return of(this.getProductsByAnswers(answers)).pipe(
       delay(400)
-    )
+    );
   }
 
   private getProductsByAnswers(answers){
     // creating array for available products
     let availableProducts = [];
     // checking if answers submitted
-    if (!answers) return availableProducts;
+    if (!answers) {
+      return availableProducts;
+    }
 
     for(let product of testProducts){
       // creating array for product rules which pass the test
@@ -39,7 +41,7 @@ export class ApiService {
           }
       }
       // if product passes all the rules, it gets added to available product list
-      if (productRulesPassed.length == product.rules.length){
+      if (productRulesPassed.length === product.rules.length){
           availableProducts.push(product);
       }
     }

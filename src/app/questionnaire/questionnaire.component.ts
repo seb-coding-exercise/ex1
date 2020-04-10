@@ -13,15 +13,12 @@ import { Product } from '../shared/types/Product';
 export class QuestionnaireComponent implements OnInit {
 
   questions: Question[] = testQuestions;
-  availableProducts:Product[] = [];
-  isFormLoading:boolean = false;
-
-
-
+  availableProducts: Product[] = [];
+  isFormLoading = false;
   questionnareForm = new FormGroup({});
 
   constructor(private api: ApiService) {
-    for(let question of this.questions){
+    for(const question of this.questions){
       this.questionnareForm.addControl(question.key, new FormControl('', Validators.required));
     }
   }
@@ -29,7 +26,7 @@ export class QuestionnaireComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit():void {
+  onSubmit(): void {
     this.questionnareForm.markAllAsTouched();
     if (!this.questionnareForm.valid || this.isFormLoading){
       return;
@@ -47,6 +44,4 @@ export class QuestionnaireComponent implements OnInit {
       }
     );
   }
-
-
 }
