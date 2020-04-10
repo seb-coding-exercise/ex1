@@ -1,25 +1,23 @@
 # SebList
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.
+This is exercise for SEB technical interview process.
+
+Project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.
 
 This exercise uses fakeData to generate questions and answers "src/shared/data/testData.ts";
 
-## Development server
+To start the project run `npm run showme` in the console (terminal) and navigate to `http://localhost:4200/`.
+To run tests run `npm run test`;
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+What does this project do?
+* Questions and options are generated dynamically from test data
+* Possible products for user are returned from service with simulated delay
+* Basic form validation (required fields)
+* Radio component is reusable
+* It uses reactive forms
+* Some cases of product filtering are tested
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-git-commit
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+What is missing?
+* Test coverage might be better
+* Mock server to test http requests (This was not in exercise description)
+* Some style splitting into variable files, responsive view, etc. (This was not in exercise description)
